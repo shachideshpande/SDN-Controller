@@ -1,0 +1,150 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Reading design: SAL.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "SAL.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "SAL"
+Output Format                      : NGC
+Target Device                      : xc6slx45-3-csg324
+
+---- Source Options
+Top Module Name                    : SAL
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/neeladri/Music/RadianceCode/my_package.vhd" into library work
+Parsing package <my_package>.
+Parsing package body <my_package>.
+Parsing VHDL file "/home/neeladri/Music/RadianceCode/TrafficModule.vhd" into library work
+Parsing entity <TrafficModule>.
+Parsing architecture <Behavioral> of entity <trafficmodule>.
+Parsing VHDL file "/home/neeladri/Music/RadianceCode/overall_stats.vhd" into library work
+Parsing entity <overall_stats>.
+Parsing architecture <Behavioral> of entity <overall_stats>.
+Parsing VHDL file "/home/neeladri/Music/RadianceCode/algo.vhd" into library work
+Parsing entity <algo>.
+Parsing architecture <Behavioral> of entity <algo>.
+Parsing VHDL file "/home/neeladri/Music/RadianceCode/Radiance_top.vhd" into library work
+Parsing entity <SAL>.
+Parsing architecture <Behavioral> of entity <sal>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <SAL> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <algo> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:871 - "/home/neeladri/Music/RadianceCode/algo.vhd" Line 85: Using initial value "000" for n_width_zeros since it is never assigned
+WARNING:HDLCompiler:92 - "/home/neeladri/Music/RadianceCode/algo.vhd" Line 128: en_in should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/neeladri/Music/RadianceCode/algo.vhd" Line 147: a should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/neeladri/Music/RadianceCode/algo.vhd" Line 184: run_bfs should be on the sensitivity list of the process
+
+Elaborating entity <TrafficModule> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:871 - "/home/neeladri/Music/RadianceCode/TrafficModule.vhd" Line 71: Using initial value "0000000000" for temp_numn since it is never assigned
+WARNING:HDLCompiler:871 - "/home/neeladri/Music/RadianceCode/TrafficModule.vhd" Line 72: Using initial value "00000000" for temp_n since it is never assigned
+WARNING:HDLCompiler:871 - "/home/neeladri/Music/RadianceCode/TrafficModule.vhd" Line 73: Using initial value "00000000" for empty_mid since it is never assigned
+WARNING:HDLCompiler:871 - "/home/neeladri/Music/RadianceCode/TrafficModule.vhd" Line 74: Using initial value "000" for null_node since it is never assigned
+WARNING:HDLCompiler:871 - "/home/neeladri/Music/RadianceCode/TrafficModule.vhd" Line 76: Using initial value ("000","000","000","00000000",0) for empty_rec since it is never assigned
+WARNING:HDLCompiler:871 - "/home/neeladri/Music/RadianceCode/TrafficModule.vhd" Line 77: Using initial value ("000","000","00000000",0) for empty_t_rec since it is never assigned
+WARNING:HDLCompiler:1127 - "/home/neeladri/Music/RadianceCode/TrafficModule.vhd" Line 96: Assignment to real_time_position_t ignored, since the identifier is never used
+
+Elaborating entity <overall_stats> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:92 - "/home/neeladri/Music/RadianceCode/overall_stats.vhd" Line 162: reset should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/neeladri/Music/RadianceCode/Radiance_top.vhd" Line 133: nh_out should be on the sensitivity list of the process

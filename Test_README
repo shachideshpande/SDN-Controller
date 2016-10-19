@@ -1,0 +1,70 @@
+
+
+Instructions to run code :
+
+	1.) open Radiance/design
+	2.) extract RadianceCode.zip
+	3.) open RadianceCode.xise
+
+	4.) in design tab of xilinx window, choose Implementation view.
+	5.) click on SAL- Behavioral(Radiance_top.vhd)
+	6.) run Synthesize - XST 		
+	7.) in design tab of xilinx window, choose Simulation view
+	8.) click on SAL_test - behavior (Radiance_testbench1.vhd)
+	9.) run Behavioral Check Syntax 
+	10.) run Simulate Behavioral Model
+	11.) rerun the simulation for atleast 3us
+
+NOTE : 
+	it may take significant amount of time to synthasize
+
+
+
+
+Explanation of Simulation Inputs and Outputs :
+
+
+Inputs :
+
+	'A matrix' is NxN matrix representing adjacancy Matrix
+		 A(i)(j) is true iff there is edge from node i to node j
+	traffic_matrix(k)(i)(j)(m) = "t" represents from node i to destination j and m'th message of priority "k_max - k - 1"
+		number of 1 in "t" represents the number of messages to be sent with above specification
+
+	en_in is true when "A Matrix" input is valid. (must be true for atleast 1 clock rising edge)
+	traffic_en is true when "traffic Matrix" input is valid. (must be true for atleast 1 clock rising edge)
+
+
+Outputs :
+
+	NextHop: type array of array of std_logic_vector 
+	Here NextHop(i)(j) represents the next hop node from i’th node to j’th final destination. 
+	Real_Time_Status: 
+	Real_Time_Status(i)(j): represents the packet at node i’s => j’th memory block. 
+	Real_Time_Status(i)(j).cur : represents the node its currently present at(which is ‘i’). 
+	Real_Time_Status(i)(j).dst : represents the destination node the packet is targeted at. 
+	Real_Time_Status(i)(j).src : represents the source node the packet started at. 
+	Real_Time_Status(i)(j).idN: represents the id of the packet . 
+	Real_Time_Status(i)(j).k   : represents the priority level ​
+	(application)​
+	of the packet. 
+	 
+	Real_Time_T_Table: 
+	Real_Time_T_Table(i)(j) : represents the packet at node i destined to node j and will go to 
+	its next hop. 
+	Real_Time_T_Table(i)(j).nxt : represents the next hop of that packet. 
+	Real_Time_T_Table(i)(j).cur : represents the node it is currently present at. 
+	Real_Time_T_Table(i)(j).idN : represents the id of the packet. 
+	Real_Time_T_Table(i)(j).idx : represents the memory position of this packet in its current 
+	node. 
+	 
+	Latency: integer ­ average end to end delay over all nodes 
+	Jitter: integer ­ variation of latency over all nodes  
+	Total_Dropped: integer ­ total packets dropped 
+	Latency_Status: array of array of integer 
+	 Latency_Status(i)(j) ­ represents the average latency of path from node i to node j. 
+	Jitter_Status:  array of array of integer 
+	Jitter_Status(i)(j) ­ represents the  jitter of path from node i to node j. 
+
+
+

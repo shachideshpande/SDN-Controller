@@ -1,0 +1,5 @@
+vhdl work "my_package.vhd"
+vhdl work "TrafficModule.vhd"
+vhdl work "overall_stats.vhd"
+vhdl work "algo.vhd"
+vhdl work "Radiance_top.vhd"

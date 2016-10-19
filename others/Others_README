@@ -1,0 +1,28 @@
+Explaining Screenshots in Radiance/others
+
+simulation1.png
+	shows Real_Time_Status as explained above.
+	here,
+		Real_Time_Status[2][2] = {010,101,010,00000111,1} represents the following.
+		src of this message is 010 that is node 2.
+		destination of this message is 101 that is node 5.
+		curr  is the node in which this message is currently at. that is this message is at node 010 (node 2)
+		idk is the unique id of this message that is 00000111 that is 7.
+		k is application priority of this message that is 1
+
+simulation2.png
+	shows other signals like jitter, latency and so on. 
+
+simulation3.png:
+
+	shows the NextHop matrix, where NH(i)(j) shows the next hop node for packet going from node i to node j, calculated by shortest path algorithm.
+
+	Here, consider 2nd row of NH matrix, that is the 1st node. 
+	The values are (000,001,010,010,101,101,101,111)
+	Thus the next hop node from path from node 1 to node 1 (i.e. to itself ) is node 001 ( i.e. node 1 itself).
+	again, next hop node for path from nde 1 to say node 4 is node 101, i.e. node 5.
+	In this way, path of node 1 to node 'i' is denoted by i-th entry of this row corresponding to node 1.
+
+	Similarly Matrix A above it shows adjacency matrix as input.
+	If the entry A(i,j) is '1', then there is an edge between the i-th and j-th node.
+	For example, A(4) is the row corresponding to 4th node. The entry is 01111000, i.e from this node, you can reach the 3,4,5,6 nodes by direct edge. ( note that we are indexing right to left ).

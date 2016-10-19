@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/neeladri/Music/RadianceCode/SAL_test_isim_beh.exe" -prj "/home/neeladri/Music/RadianceCode/SAL_test_beh.prj" "work.SAL_test" 

@@ -1,0 +1,33 @@
+Running: /home/neeladri/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/neeladri/Music/RadianceCode/SAL_test_isim_beh.exe -prj /home/neeladri/Music/RadianceCode/SAL_test_beh.prj work.SAL_test 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/neeladri/Music/RadianceCode/my_package.vhd" into library work
+Parsing VHDL file "/home/neeladri/Music/RadianceCode/TrafficModule.vhd" into library work
+Parsing VHDL file "/home/neeladri/Music/RadianceCode/overall_stats.vhd" into library work
+Parsing VHDL file "/home/neeladri/Music/RadianceCode/algo.vhd" into library work
+Parsing VHDL file "/home/neeladri/Music/RadianceCode/Radiance_top.vhd" into library work
+Parsing VHDL file "/home/neeladri/Music/RadianceCode/Radiance_testbench1.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 98580 KB
+Fuse CPU Usage: 1430 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package my_package
+Compiling package numeric_std
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity algo [\algo(3,8)\]
+Compiling architecture behavioral of entity TrafficModule [\TrafficModule(7,8,3,8,2,10)\]
+Compiling architecture behavioral of entity overall_stats [\overall_stats(8)\]
+Compiling architecture behavioral of entity SAL [sal_default]
+Compiling architecture behavior of entity sal_test
+Time Resolution for simulation is 1ps.
+Waiting for 2 sub-compilation(s) to finish...
+Compiled 15 VHDL Units
+Built simulation executable /home/neeladri/Music/RadianceCode/SAL_test_isim_beh.exe
+Fuse Memory Usage: 676656 KB
+Fuse CPU Usage: 1700 ms
+GCC CPU Usage: 4800 ms

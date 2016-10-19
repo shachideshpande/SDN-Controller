@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/neeladri/Music/RadianceCode/SAL.xst" -ofn "/home/neeladri/Music/RadianceCode/SAL.syr" 
